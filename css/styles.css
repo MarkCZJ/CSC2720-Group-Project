@@ -1,0 +1,65 @@
+body{
+    background: #83a7ed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h1{
+    color: midnightblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+/*class - can be reused in html file by calling the class
+class="name"
+adding multiple classes
+class="class1 class2"
+*/
+.highlighted{
+    background: yellow
+}
+.fontsize{
+    font-size: 5px;
+}
+/*does both highlighted and fontisze style and its own
+separated with a space
+class="class1 class2"
+*/
+.highlighted.fontsize{
+    background: green
+}
+/*id selectors - can only be used once per page, must have
+unique name
+id="name"*/
+#highlight{
+    background: yellow
+}
+/*applies style only to <a> tags in <p>
+*/
+p a{
+    background: pink
+}
+/*applies same style to all 3 elements - combine duplicate style*/
+h3, h4, h5{
+    color: red
+}
+/*splits into .test123 h1 and h5 - h5 doesnt have class name
+.test123 h1, .testabc h5 different thing*/
+.test123 h1, h5{
+    background: darkkhaki
+}
+/*applies style if hovering over "a" element
+can also be applied to other elements not just links*/
+a:hover{
+    color: white
+}
+/* applies style to links already visited */
+a:visited{
+    background: lightblue
+}
+/* applies style during the click action */
+a:active{
+    background: red
+}
+/* applies style when tabbing through webpage */
+a:focus, input:focus{
+    outline: 5px solid black;
+}
+/* NOTES 
+section out css by sections of your webpage and global css*/
