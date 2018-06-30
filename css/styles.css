@@ -44,13 +44,11 @@ h3{
 .left {
     text-align: left;
     display: inline-block;
-    border: 2px solid black;
     padding: 20px;
 }
 .right{
     text-align: left;
     display: inline-block;
-    border: 2px solid black;
     padding: 20px;
 }
 .centeredbutton{
