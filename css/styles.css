@@ -1,0 +1,59 @@
+/* theme
+#FFFFFF - White
+#D9D9D9 - Gainsboro
+#3C6E71 - Myrtle green
+#284B63 - Dark Slate Gray
+#353535 - Jet Black
+*/
+/* global style */
+html, body{
+    text-align: center;
+}
+body{
+    margin: 0;
+    background: #284B63;
+}
+h1, h3, h4{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* title */
+h1{
+    text-align: center;
+    background: #353535;
+    margin: 0;
+    padding: 50px;
+}
+
+/* subheading */
+h3{
+    margin: 0;
+    text-align: right;
+    background: #FFFFFF;
+    color: #3C6E71;
+    padding-right: 40px;
+}
+
+/* search */
+.wrapper{
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.left {
+    text-align: left;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 20px;
+}
+.right{
+    text-align: left;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 20px;
+}
+.centeredbutton{
+    padding: 50px;
+    text-align: center;
+}
