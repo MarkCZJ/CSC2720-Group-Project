@@ -13,7 +13,7 @@ body{
     margin: 0;
     background: #284B63;
 }
-h1, h3, h4{
+h1, h2, h3, h4{
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
@@ -38,7 +38,6 @@ h3{
 .wrapper{
     display: inline-block;
     vertical-align: middle;
-
 }
 .left {
     text-align: left;
@@ -53,6 +52,17 @@ h3{
 .centeredbutton{
     padding: 50px;
     text-align: center;
+}
+/* SEARCH PAGE */
+.paddingsearchtitle{
+    padding: 20px;
+}
+/* <a> properties */
+a:link, a:visited {
+    color: white;
+}
+a:hover{
+    color: #3C6E71;
 }
 
 /* animation */
@@ -80,6 +90,12 @@ h3{
     animation-iteration-count: infinite;
 }
 
+/* flashing bar animation */
+.animationoverflow{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0;
+}
 @keyframes test2{
     0% {background-color:#FFFFFF; left: 0px;}
     16.67% {background-color:#D9D9D9; }
@@ -89,186 +105,68 @@ h3{
     83.33% {background-color:#D9D9D9; }
     100% {background-color:#FFFFFF; left: 0px;}
 }
-
-.ani2, .ani3, .ani4, .ani5, .ani6, .ani7, .ani8, .ani9, .ani10, .ani11, .ani12, .ani13, .ani14 {
+.ani2{
+    margin: auto;
     width: 100px;
     height: 25px;
-    position: fixed;
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-duration: 4s;
     animation-iteration-count: infinite;
-}
-.ani2{
+    display: inline-block;
     -webkit-animation-name: test2; /* Safari 4.0 - 8.0 */
     animation-name: test2;
+}
+.ani2:nth-of-type(1){
     animation-delay: .0s;
 }
-.ani3{
-    -webkit-animation-name: test3; /* Safari 4.0 - 8.0 */
-    animation-name: test3;
+.ani2:nth-of-type(2){
     animation-delay: .1s;
 }
-.ani4{
-    -webkit-animation-name: test4; /* Safari 4.0 - 8.0 */
-    animation-name: test4;
+.ani2:nth-of-type(3){
     animation-delay: .2s;
 }
-.ani5{
-    -webkit-animation-name: test5; /* Safari 4.0 - 8.0 */
-    animation-name: test5;
+.ani2:nth-of-type(4){
     animation-delay: .3s;
 }
-.ani6{
-    -webkit-animation-name: test6; /* Safari 4.0 - 8.0 */
-    animation-name: test6;
+.ani2:nth-of-type(5){
     animation-delay: .4s;
 }
-.ani7{
-    -webkit-animation-name: test7; /* Safari 4.0 - 8.0 */
-    animation-name: test7;
+.ani2:nth-of-type(6){
     animation-delay: .5s;
 }
-.ani8{
-    -webkit-animation-name: test8; /* Safari 4.0 - 8.0 */
-    animation-name: test8;
+.ani2:nth-of-type(7){
     animation-delay: .6s;
 }
-.ani9{
-    -webkit-animation-name: test9; /* Safari 4.0 - 8.0 */
-    animation-name: test9;
+.ani2:nth-of-type(8){
     animation-delay: .7s;
 }
-.ani10{
-    -webkit-animation-name: test10; /* Safari 4.0 - 8.0 */
-    animation-name: test10;
+.ani2:nth-of-type(9){
     animation-delay: .8s;
 }
-.ani11{
-    -webkit-animation-name: test11; /* Safari 4.0 - 8.0 */
-    animation-name: test11;
+.ani2:nth-of-type(10){
     animation-delay: .9s;
 }
-.ani12{
-    -webkit-animation-name: test12; /* Safari 4.0 - 8.0 */
-    animation-name: test12;
+.ani2:nth-of-type(11){
     animation-delay: 1.0s;
 }
-.ani13{
-    -webkit-animation-name: test13; /* Safari 4.0 - 8.0 */
-    animation-name: test13;
+.ani2:nth-of-type(12){
     animation-delay: 1.1s;
 }
-.ani14{
-    -webkit-animation-name: test14; /* Safari 4.0 - 8.0 */
-    animation-name: test14;
+.ani2:nth-of-type(13){
     animation-delay: 1.2s;
 }
-
-@keyframes test3{
-    0% {background-color:#FFFFFF; left: 100px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 100px;}
+.ani2:nth-of-type(14){
+    animation-delay: 1.3s;
 }
-@keyframes test4{
-    0% {background-color:#FFFFFF; left: 200px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 200px;}
+.ani2:nth-of-type(15){
+    animation-delay: 1.4s;
 }
-@keyframes test5{
-    0% {background-color:#FFFFFF; left: 300px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 300px;}
+.ani2:nth-of-type(16){
+    animation-delay: 1.5s;
 }
-@keyframes test6{
-    0% {background-color:#FFFFFF; left: 400px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 400px;}
+.ani2:nth-of-type(17){
+    animation-delay: 1.6s;
 }
-@keyframes test7{
-    0% {background-color:#FFFFFF; left: 500px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 500px;}
-}
-@keyframes test8{
-    0% {background-color:#FFFFFF; left: 600px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 600px;}
-}
-@keyframes test9{
-    0% {background-color:#FFFFFF; left: 700px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 700px;}
-}
-@keyframes test10{
-    0% {background-color:#FFFFFF; left: 800px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 800px;}
-}
-@keyframes test11{
-    0% {background-color:#FFFFFF; left: 900px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 900px;}
-}
-@keyframes test12{
-    0% {background-color:#FFFFFF; left: 1000px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 1000px;}
-}
-@keyframes test13{
-    0% {background-color:#FFFFFF; left: 1100px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 1100px;}
-}
-@keyframes test14{
-    0% {background-color:#FFFFFF; left: 1200px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 1200px;}
+.ani2:nth-of-type(18){
+    animation-delay: 1.7s;
 }
