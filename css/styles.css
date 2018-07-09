@@ -5,7 +5,8 @@
 #284B63 - Dark Slate Gray
 #353535 - Jet Black
 */
-/* global style */
+
+/*********************** global style ***********************/
 html, body{
     text-align: center;
 }
@@ -13,12 +14,22 @@ body{
     margin: 0;
     background: #284B63;
 }
-h1, h2, h3, h4{
+h1, h2, h3, h4, label, table, ul, p{
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
+h1{
+    font-size: 30px;
+}
 
-/* title */
+a:link, a:visited {
+    color: white;
+}
+a:hover, a:focus{
+    color: #3C6E71;
+}
+
+/*********************** title ***********************/
 .header{
     text-align: center;
     background: #353535;
@@ -26,15 +37,22 @@ h1, h2, h3, h4{
     padding: 50px;
 }
 
-/* subheading */
-h3{
+/*********************** subheading ***********************/
+ul {
+    list-style-type: none;
     margin: 0;
-    text-align: right;
-    color: #3C6E71;
-    padding-right: 30px;
+    padding: 0;
+}
+li{
+    font-size: 20px;
+    padding: 10px;
+    float: right;
 }
 
-/* search */
+
+
+/*********************** search ***********************/
+/* formating */
 .wrapper{
     display: inline-block;
     vertical-align: middle;
@@ -53,19 +71,66 @@ h3{
     padding: 50px;
     text-align: center;
 }
-/* SEARCH PAGE */
+/* text field style */
+input[type=text]{
+    border: 2px solid #353535;
+    border-radius: 12px;
+    padding: 10px 15px;
+}
+input[type=text]:focus{
+    background-color: #D9D9D9;
+}
+.nameTextField{
+    width: 285px;
+}
+.yearTextField{
+    width: 100px;
+}
+/* search button style */
+.button {
+    background-color:white;
+    border: 2px solid #353535;
+    border-radius: 12px;
+    box-shadow: 0 7px 0px 0px;
+    color: #353535;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 40px;
+}
+.button:hover, .button:active, .button:focus{
+    background-color:#353535;
+    border: 2px solid white;
+    color: white;
+}
+.button:active{
+    box-shadow: 0 2px 0px 0px;
+    transform: translateY(5px);
+}
+/*********************** MYLIST PAGE***********************/
+/* Formatting */
 .paddingsearchtitle{
     padding: 20px;
 }
-/* <a> properties */
-a:link, a:visited {
-    color: white;
+/* table */
+table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
 }
-a:hover{
-    color: #3C6E71;
+td, th{
+    border: 2px solid white;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: #3C6E71
+}
+tr:nth-child(odd){
+   
 }
 
-/* animation */
+/*********************** animation ***********************/
+/* small single box */
 @keyframes test{
     0% {background-color:#FFFFFF; left: -100px;}
     16.67% {background-color:#D9D9D9; }
@@ -74,9 +139,6 @@ a:hover{
     66.67% {background-color:#3C6E71; }
     83.33% {background-color:#D9D9D9; }
     100% {background-color:#FFFFFF; left: -100px;}
-    /* 0%   {background-color:red; left: -100px; top:0px;}
-    50% {background-color:green; left: 100px; top:0px;}
-    100%   {background-color:red; left: -100px; top:0px;} */
 }
 .animationtest {
     margin: auto;
@@ -89,7 +151,6 @@ a:hover{
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
-
 /* flashing bar animation */
 .animationoverflow{
     white-space: nowrap;
@@ -170,3 +231,47 @@ a:hover{
 .ani2:nth-of-type(18){
     animation-delay: 1.7s;
 }
+/* movie animation test */
+/* .moviefilmanimation{
+    background-color: #353535;
+    width: 21px;
+    height: 150px;
+    position: absolute;
+    margin-top: 50px;
+}
+.leftReel{
+    left: 0px;
+}
+.leftReel::after{
+    content: "";
+    position: absolute;
+    margin-top: 5px;
+    margin-left:-5px;
+    width: 10px;
+    height: 140px;
+    border-radius:2px;
+    background-color: white;
+    background: linear-gradient(
+        to bottom,
+        #353535, 
+        white
+    );
+    background-size: 100% 50px;
+    animation: reel-movement 110ms linear infinite;
+}
+.rightReel{
+    left: 125px;
+}
+@keyframes reel-movement{
+    100%{
+        background: linear-gradient(
+            to bottom,
+            lighten(white, 15%) 50%,
+            lighten(white, 15%),
+            white,
+            white 50%
+        );
+        background-size: 100% 20px;
+    }
+
+} */
