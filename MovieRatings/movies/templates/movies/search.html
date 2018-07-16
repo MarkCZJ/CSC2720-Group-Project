@@ -413,7 +413,7 @@ th{
                 <th>Year</th>
                 <th>Your Rating</th>
             </tr>
-            {% for movie in all_movies %}
+            {% for movie in found_movies %}
             <tr>
                 <td><a href={{ movie.movie_imdb_link }}>{{ movie.movie_title }}</a></td>
                 <td>{{ movie.title_year }}</td>

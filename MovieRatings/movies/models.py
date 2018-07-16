@@ -1,4 +1,11 @@
 from django.db import models
+from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
+import hashlib
+from datetime import datetime
+
+User = settings.AUTH_USER_MODEL
 
 class Movie(models.Model):
     # tconst = models.CharField(max_length=9)
@@ -39,4 +46,8 @@ class Movie(models.Model):
     def __str__(self):
         return self.movie_title + ' - ' + self.title_year
 
+class UserRatings(models.Model):
+    user = models.ForeignKey(User, related_name='user', on_delete=models.DO_NOTHING)
+    movie = models.ForeignKey(Movie, related_name='user',on_delete=models.DO_NOTHING)
+    rating = models.IntegerField()
 

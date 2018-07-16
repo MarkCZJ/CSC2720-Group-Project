@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django import forms
+from .models import  UserRatings, Movie
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
@@ -8,3 +9,16 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username','password']
+
+class RateMovie(forms.Form):
+    class Meta:
+        model = UserRatings
+        fields = ('user','movie','ratings')
+
+    def save(self, commit=True):
+        instance = super(RateMovie, self).save(commit=False)
+        # rating =forms.IntegerField(help_text="Enter any number from 0 to 10")
+        rating = self.cleaned_data['rating']
+        movie = self.cleaned_data['movie']
+        instance.save()
+        return instance

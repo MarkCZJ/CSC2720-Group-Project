@@ -422,14 +422,19 @@ th{
         <div class="wrapper">
             <div class="searchTextFieldFormatting">
                 <h4>Movie Title</h4>
-                <input class="nameTextField" type="text" placeholder="Name of movie...">
+
+            <form name='search' method="GET" action="{% url 'movies:search' %}">
+                            <input class="nameTextField" name="query" type="text" placeholder="Name of movie...">
+{#                 <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">#}
+                <div class="centeredbutton">
+
+                <button class ="submitButton" type="submit">Search</button>
+ </div>
+
+            </form>
             </div>
         </div>
-        <div class="centeredbutton">
-            <form action="search">
-                <button class ="submitButton" type="submit">Search</button>
-            </form>
-        </div>
+
     </section>
     </body>
 </body>

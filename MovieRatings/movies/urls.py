@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('search', views.search, name='search'),
     path('register', views.register, name='register'),
+    # path('<uuid:pk>/rate', views.rate_movie, name='rate_movie')
 
     # # /movies/<movie id>/favorite/
     # re_path(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
@@ -18,4 +19,4 @@ urlpatterns = [
     # re_path(r'all_movies', views.all_movies, name='all_movies'),
 
 ]
-urlpatterns += staticfiles_urlpatterns()
+# urlpatterns += staticfiles_urlpatterns()
