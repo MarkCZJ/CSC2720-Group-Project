@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from .models import Movie
+from .models import Movie, UserRatings
+from django.contrib.auth.models import User
 from django.views.generic import View
 from .forms import UserForm, RateMovie
 from django.contrib.auth.forms import UserCreationForm
@@ -97,3 +98,34 @@ def search(request):
             return render(request, 'movies/search.html',{'found_movies':found_movies})
         except:
             return render(request,'movies/search.html',{})
+
+def rate(request):
+    if request.method == 'GET':
+        form = request.GET.__str__()
+        print(form)
+    if request.method == 'POST':
+        form = request.POST.__str__()
+        print(form)
+        user2 = request.user.id
+        user3 = User.objects.get(id=user2)
+        movie_id = request.POST.get('movie')
+        movie2 = Movie.objects.get(id=movie_id)
+        rating2 = request.POST.get('rating')
+        print(user2)
+    obj, creates = UserRatings.objects.get_or_create(
+    user = user3,
+    movie = movie2,
+    rating = rating2
+    )
+    return render(request, 'movies/index.html',{})
+
+    #     if form.is_valid():
+    #         form.save()
+    #         username = form.cleaned_data.get('username')
+    #         raw_password = form.cleaned_data.get('password1')
+    #         user = authenticate(username=username, password=raw_password)
+    #         login(request, user)
+    #         return redirect('movies:index')
+    # else:
+    #     form = UserCreationForm()
+    # return render(request, 'movies/register.html', {'form': form})

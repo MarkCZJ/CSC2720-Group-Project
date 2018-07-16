@@ -417,8 +417,19 @@ th{
             <tr>
                 <td><a href={{ movie.movie_imdb_link }}>{{ movie.movie_title }}</a></td>
                 <td>{{ movie.title_year }}</td>
-                <td><input class="rateTF" type="text" placeholder="#">
-                    <button class="smallButton" type="submit">Rate</button></td>
+                <td>
+                                <form name='rate' method="POST" action="{% url 'movies:rate' %}">
+                                    {% csrf_token %}
+{#                 <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">#}
+                   <input class="rateTF" type="text" name="rating" placeholder="#">
+                    <input type="hidden" name="movie" value="{{ movie.id }}">
+                                    <input type="hidden" name="user" value="{{ user.id }}">
+                    <button class="smallButton" type="submit">Rate</button>
+
+            </form>
+                </td>
+{#                    <input class="rateTF" type="text" placeholder="#">#}
+{#                    <button class="smallButton" type="submit">Rate</button></td>#}
             </tr>
             {% endfor %}
         </table>
