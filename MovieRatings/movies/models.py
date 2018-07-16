@@ -43,13 +43,12 @@ class Movie(models.Model):
     # aspect_ratio = models.CharField(max_length=255)
     # movie_facebook_likes = models.CharField(max_length=255)
 
-    def __str__(self):
-        return self.movie_title + ' - ' + self.title_year
 
 class UserRatings(models.Model):
     # user = models.ForeignKey(User, related_name='user', on_delete=models.DO_NOTHING)
     # movie = models.ForeignKey(Movie, related_name='movie',on_delete=models.DO_NOTHING)
     user = models.IntegerField()
-    movie = models.IntegerField()
+    movie_title = models.CharField(max_length=255)
+    title_year = models.IntegerField()
     rating = models.IntegerField()
 

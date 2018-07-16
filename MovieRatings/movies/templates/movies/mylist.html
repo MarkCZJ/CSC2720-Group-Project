@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Search Results</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List</title>
 </head>
-
-<style>/* theme
+<style>
+    /* theme
 #FFFFFF - White
 #D9D9D9 - Gainsboro
 #3C6E71 - Myrtle green
@@ -368,10 +368,10 @@ th{
 }
 .leftReel4::before, .rightReel4::before{
     animation-delay: -4.375s;
-}</style>
-
+}
+</style>
 <body>
-    <!-- title -->
+    <!-- title logo/banner -->
     <section class="header">
         <h1><a href="index">Movie List</a></h1>
         <div class="animationtest"></div>
@@ -379,7 +379,7 @@ th{
         <ul>
             <li><a href="mylist">My List</a></li>
             <li><a href="login.html">Login</a>/<a href="register">Register</a></li>
-
+            
         </ul>
     </section>
     <section class="animationoverflow">
@@ -402,18 +402,21 @@ th{
         <div class="ani2"></div>
         <div class="ani2"></div>
     </section>
-    <section>
-        <h2>SEARCH RESULTS</h2>
+    <!-- Search output -->
+    <section class="paddingsearchtitle">
+         <h2>MY LIST</h2>
     </section>
     <section>
         <table>
-
             <tr>
                 <th>Movie Title</th>
                 <th>Year</th>
-                <th>Your Rating</th>
+                <th>Rating/10</th>
             </tr>
-            {% for movie in found_movies %}
+            <tr>
+
+
+                            {% for movie in found_movies %}
             <tr>
                 <td><a href={{ movie.movie_imdb_link }}>{{ movie.movie_title }}</a></td>
                 <td>{{ movie.title_year }}</td>
@@ -421,11 +424,12 @@ th{
                                 <form name='rate' method="POST" action="{% url 'movies:rate' %}">
                                     {% csrf_token %}
 {#                 <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">#}
-                   <input class="rateTF" type="number" name="rating" placeholder="#">
+                   <input class="rateTF" type="number" name="rating" placeholder="{{ movie.rating }}">
                     <input type="hidden" name="movie" value="{{ movie.movie_title }}">
                                     <input type="hidden" name="year" value="{{ movie.title_year }}">
                                     <input type="hidden" name="user" value="{{ user.id }}">
                     <button class="smallButton" type="submit">Rate</button>
+
 
             </form>
                 </td>
@@ -433,6 +437,7 @@ th{
 {#                    <button class="smallButton" type="submit">Rate</button></td>#}
             </tr>
             {% endfor %}
+            </tr>
         </table>
     </section>
 </body>

@@ -6,9 +6,11 @@ app_name = 'movies'
 urlpatterns = [
     # /movies/
     path('', views.index, name='index'),
+    path('index', views.index, name='index'),
     path('search', views.search, name='search'),
     path('register', views.register, name='register'),
     path('rate', views.rate, name='rate'),
+    path('mylist', views.my_list, name='mylist')
     # path('<uuid:pk>/rate', views.rate_movie, name='rate_movie')
 
     # # /movies/<movie id>/favorite/

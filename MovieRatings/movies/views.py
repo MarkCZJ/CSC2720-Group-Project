@@ -106,18 +106,38 @@ def rate(request):
     if request.method == 'POST':
         form = request.POST.__str__()
         print(form)
-        user2 = request.user.id
-        user3 = User.objects.get(id=user2)
-        movie_id = request.POST.get('movie')
-        movie2 = Movie.objects.get(id=movie_id)
-        rating2 = request.POST.get('rating')
-        print(user2)
+        user_id = request.user.id
+        movie = request.POST.get('movie')
+        year = request.POST.get('year')
+        user_rating = request.POST.get('rating')
+        print(user_id)
     obj, creates = UserRatings.objects.get_or_create(
-    user = user3,
-    movie = movie2,
-    rating = rating2
+    user = user_id,
+    movie_title = movie,
+    title_year= year,
+    rating = user_rating
     )
     return render(request, 'movies/index.html',{})
+
+def my_list(request):
+
+
+    if request.method == 'GET':
+        user_id = request.user.id
+
+        try:
+            ratings = UserRatings.objects.filter(user__exact=user_id)
+            # found_movies = Movie.objects.filter(movie_title_exact= ratings.only('movie'))
+            # found_movies = found_movies.order_by('title_year')
+            print(ratings.__str__())
+            context = {
+                'found_ratings': ratings,
+                # 'found_movies':Movie.objects.filter(ratings.objects.)
+
+            }
+            return render(request, 'movies/mylist.html',{'found_movies':ratings})
+        except:
+            return render(request,'movies/search.html',{})
 
     #     if form.is_valid():
     #         form.save()
