@@ -409,28 +409,48 @@ th{
         <table>
 
             <tr>
-                <th>Movie Title</th>
+                <th>Movie Title(Click to access to its IMDb website)</th>
                 <th>Year</th>
+                <th>IMDB Score</th>
+                <th>Director</th>
+                <th>Genres</th>
                 <th>Your Rating</th>
             </tr>
             {% for movie in found_movies %}
             <tr>
                 <td><a href={{ movie.movie_imdb_link }}>{{ movie.movie_title }}</a></td>
                 <td>{{ movie.title_year }}</td>
+                <td>{{ movie.imdb_score }}</td>
+                <td>{{ movie.director_name }}</td>
+                <td>{{ movie.genres }}</td>
+
                 <td>
-                                <form name='rate' method="POST" action="{% url 'movies:rate' %}">
-                                    {% csrf_token %}
-{#                 <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">#}
-                   <input class="rateTF" type="number" name="rating" placeholder="#">
-                    <input type="hidden" name="movie" value="{{ movie.movie_title }}">
-                                    <input type="hidden" name="year" value="{{ movie.title_year }}">
-                                    <input type="hidden" name="user" value="{{ user.id }}">
+                    <form name='rate' method="POST" action="{% url 'movies:rate' %}">
+
+
+                         <input type="hidden" name="movie" value="{{ movie.movie_title }}">
+                         <input type="hidden" name="year" value="{{ movie.title_year }}">
+                         <input type="hidden" name="user" value="{{ user.id }}">
+
+                        <select id="rating">
+                    <option value="">--Please choose a rate--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option></select>
                     <button class="smallButton" type="submit">Rate</button>
 
-            </form>
+</form>
                 </td>
-{#                    <input class="rateTF" type="text" placeholder="#">#}
-{#                    <button class="smallButton" type="submit">Rate</button></td>#}
+
+
+
             </tr>
             {% endfor %}
         </table>
