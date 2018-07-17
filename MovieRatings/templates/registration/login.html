@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="main.js"></script>
 </head>
-<style>/* theme
+<style>
+/* theme
 #FFFFFF - White
 #D9D9D9 - Gainsboro
 #3C6E71 - Myrtle green
@@ -40,14 +41,15 @@ a:hover, a:focus{
     color: #3C6E71;
 }
 /* text field style */
-input[type=text]{
+input[type=text], input[type=password]{
     border: 2px solid #353535;
     border-radius: 12px;
     padding: 10px 15px;
 }
-input[type=text]:focus{
+input[type=text]:focus, input[type=password]{
     background-color: #D9D9D9;
 }
+
 /*********************** home title ***********************/
 .header{
     text-align: center;
@@ -269,109 +271,7 @@ th{
 .ani2:nth-of-type(18){
     animation-delay: -0.0s;
 }
-/*********************** film reel animation ***********************/
-/* formatting */
-
-.leftFormatting{
-   left: 0px;
-   position: absolute;
-}
-.rightFormatting{
-    right: 0px;
-    position: absolute;
-}
-.clip{
-    clip-path: polygon(0px 0px, 150px 0px, 150px 300px, 0px 300px);
-}
-.moviefilmanimation{
-    background-color: #353535;
-    width: 21px;
-    height: 350px;
-    position: absolute;
-    margin-top: 0;
-}
-.leftReel{
-    left: 0;
-}
-.leftReel2, .leftReel3, .leftReel4{
-    left: 11px;
-    width: 0;
-}
-.rightReel{
-    left: 125px;
-
-}
-.rightReel2, .rightReel3, .rightReel4{
-    left: 136px;
-    width: 0;
-}
-.mainReelBG{
-    left: 21px;
-    width: 104px;
-}
-.mainReel, .mainReel2{
-    left: 30px;
-    width: 0px;
-}
-.leftReel::after, .leftReel::before, .leftReel2::after, .leftReel2::before, .leftReel3::after, .leftReel3::before, .leftReel4::after, .leftReel4::before,
-.rightReel::after, .rightReel::before, .rightReel2::after, .rightReel2::before, .rightReel3::after, .rightReel3::before, .rightReel4::after, .rightReel4::before,
- .mainReel::after, .mainReel::before, .mainReel2::after, .mainReel2::before{
-    content: "";
-    position: absolute;
-    margin-top: 5px;
-    margin-left:-5px;
-    width: 10px;
-    height: 10px;
-    border-radius:2px;
-    background-color: white;
-    background-size: 100% 50px;
-    animation: reel-movement 5s linear infinite;
-}
-.mainReel::after, .mainReel::before, .mainReel2::after, .mainReel2:before{
-    width: 92px;
-    height: 52px;
-    animation: main-movement 5s linear infinite;
-}
-@keyframes reel-movement{
-    0%{
-       bottom: 0;
-    }
-    100%{
-        bottom:350px;
-    }
-}
-@keyframes main-movement{
-    0%{
-       bottom: 0;
-    }
-    100%{
-        bottom:350px;
-    }
-}
-.leftReel::after, .rightReel::after, .mainReel::after{
-    animation-delay: 0s;
-}
-.leftReel::before, .rightReel::before{
-    animation-delay: -.625s;
-}
-.leftReel2::after, .rightReel2::after, .mainReel::before{
-    animation-delay: -1.25s;
-}
-.leftReel2::before, .rightReel2::before{
-    animation-delay: -1.875s;
-}
-.leftReel3::after, .rightReel3::after, .mainReel2::after{
-    animation-delay: -2.5s;
-}
-.leftReel3::before, .rightReel3::before{
-    animation-delay: -3.125s;
-}
-.leftReel4::after, .rightReel4::after, .mainReel2::before{
-    animation-delay: -3.75s;
-}
-.leftReel4::before, .rightReel4::before{
-    animation-delay: -4.375s;
-}</style>
+</style>
 <body>
     <!-- title -->
     <section class="header">
