@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Search Results</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -15,38 +15,45 @@
 */
 
 /*********************** global style ***********************/
-html, body{
+html, body {
     text-align: center;
 }
-body{
+
+body {
     margin: 0;
     background: #284B63;
 }
-h1, h2, h3, h4, label, table, ul, p{
+
+h1, h2, h3, h4, label, table, ul, p {
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
-h1{
+
+h1 {
     font-size: 30px;
 }
 
 a:link, a:visited {
     color: white;
 }
-a:hover, a:focus{
+
+a:hover, a:focus {
     color: #3C6E71;
 }
+
 /* text field style */
-input[type=text]{
+input[type=text] {
     border: 2px solid #353535;
     border-radius: 12px;
     padding: 10px 15px;
 }
-input[type=text]:focus{
+
+input[type=text]:focus {
     background-color: #D9D9D9;
 }
+
 /*********************** home title ***********************/
-.header{
+.header {
     text-align: center;
     background: #353535;
     margin: 0;
@@ -60,31 +67,33 @@ ul {
     padding: 0;
     text-align: right;
 }
-li{
+
+li {
     font-size: 20px;
     padding-right: 10px;
     display: inline;
 }
 
-
-
 /*********************** home-search ***********************/
 /* formating */
-.wrapper{
+.wrapper {
     display: inline-block;
     vertical-align: middle;
 }
+
 .searchTextFieldFormatting {
     text-align: left;
     display: inline-block;
 }
-.centeredbutton{
+
+.centeredbutton {
     padding: 50px;
     text-align: center;
 }
+
 /* submit button style */
-.submitButton[type=submit]{
-    background-color:white;
+.submitButton[type=submit] {
+    background-color: white;
     border: 2px solid #353535;
     border-radius: 12px;
     box-shadow: 0 7px 0px 0px;
@@ -93,52 +102,63 @@ li{
     font-size: 16px;
     padding: 12px 40px;
 }
-.submitButton[type=submit]:hover, .submitButton[type=submit]:active, .submitButton[type=submit]:focus{
-    background-color:#353535;
+
+.submitButton[type=submit]:hover, .submitButton[type=submit]:active, .submitButton[type=submit]:focus {
+    background-color: #353535;
     border: 2px solid white;
     color: white;
 }
-.submitButton[type=submit]:active{
+
+.submitButton[type=submit]:active {
     box-shadow: 0 2px 0px 0px;
     transform: translateY(5px);
 }
-.nameTextField{
+
+.nameTextField {
     width: 285px;
 }
-.yearTextField{
+
+.yearTextField {
     width: 100px;
 }
+
 /*********************** MYLIST PAGE***********************/
 /* Formatting */
-.paddingsearchtitle{
+.paddingsearchtitle {
     padding: 20px;
 }
+
 /* table */
-table{
+table {
     width: 80%;
     border-collapse: collapse;
     margin: auto;
 }
-td, th{
+
+td, th {
     border: 2px solid white;
     text-align: left;
     padding: 8px;
 }
-tr:nth-child(even){
+
+tr:nth-child(even) {
     background-color: #3C6E71;
 }
-th{
+
+th {
     background-color: #353535;
 }
+
 /*********************** SEARCH RESULTS ***********************/
-.rateTF[type=text]{
+.rateTF[type=text] {
     height: 1px;
     width: 20px;
 }
-.smallButton[type=submit]{
+
+.smallButton[type=submit] {
     float: right;
     text-align: center;
-    background-color:white;
+    background-color: white;
     border: 2px solid #353535;
     border-radius: 2px;
     box-shadow: 0 2px 0px 0px;
@@ -147,34 +167,57 @@ th{
     font-size: 16px;
     padding: 1px 10px;
 }
-.smallButton[type=submit]:hover, .smallButton[type=submit]:active, .smallButton[type=submit]:focus{
-    background-color:#353535;
+
+.smallButton[type=submit]:hover, .smallButton[type=submit]:active, .smallButton[type=submit]:focus {
+    background-color: #353535;
     border: 2px solid white;
     color: white;
 }
-.smallButton[type=submit]:active{
+
+.smallButton[type=submit]:active {
     box-shadow: 0 0px 0px 0px;
     transform: translateY(2px);
 }
-.removeButton[type=submit]{
+
+.removeButton[type=submit] {
     background-color: rgba(255, 42, 0, 0.637);
     color: white;
 }
-.removeButton[type=submit]:hover, .removeButton[type=submit]:active, .removeButton[type=submit]:focus{
-    background-color:rgba(255, 42, 0, 0.76);
+
+.removeButton[type=submit]:hover, .removeButton[type=submit]:active, .removeButton[type=submit]:focus {
+    background-color: rgba(255, 42, 0, 0.76);
     border: 2px solid #353535;
 }
+
 /*********************** ANIAMTION ***********************/
 /* small single box */
-@keyframes test{
-    0% {background-color:#FFFFFF; left: -100px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; left: 100px;}
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: -100px;}
+@keyframes test {
+    0% {
+        background-color: #FFFFFF;
+        left: -100px;
+    }
+    16.67% {
+        background-color: #D9D9D9;
+    }
+    33.33% {
+        background-color: #3C6E71;
+    }
+    50% {
+        background-color: #284B63;
+        left: 100px;
+    }
+    66.67% {
+        background-color: #3C6E71;
+    }
+    83.33% {
+        background-color: #D9D9D9;
+    }
+    100% {
+        background-color: #FFFFFF;
+        left: -100px;
+    }
 }
+
 .animationtest {
     margin: auto;
     width: 10px;
@@ -186,22 +229,41 @@ th{
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
+
 /* flashing bar animation */
-.animationoverflow{
+.animationoverflow {
     white-space: nowrap;
     overflow: hidden;
     font-size: 0;
 }
-@keyframes test2{
-    0% {background-color:#FFFFFF; left: 0px;}
-    16.67% {background-color:#D9D9D9; }
-    33.33% {background-color:#3C6E71; }
-    50% {background-color:#284B63; }
-    66.67% {background-color:#3C6E71; }
-    83.33% {background-color:#D9D9D9; }
-    100% {background-color:#FFFFFF; left: 0px;}
+
+@keyframes test2 {
+    0% {
+        background-color: #FFFFFF;
+        left: 0px;
+    }
+    16.67% {
+        background-color: #D9D9D9;
+    }
+    33.33% {
+        background-color: #3C6E71;
+    }
+    50% {
+        background-color: #284B63;
+    }
+    66.67% {
+        background-color: #3C6E71;
+    }
+    83.33% {
+        background-color: #D9D9D9;
+    }
+    100% {
+        background-color: #FFFFFF;
+        left: 0px;
+    }
 }
-.ani2{
+
+.ani2 {
     margin: auto;
     width: 100px;
     height: 25px;
@@ -212,211 +274,251 @@ th{
     -webkit-animation-name: test2; /* Safari 4.0 - 8.0 */
     animation-name: test2;
 }
-.ani2:nth-of-type(1){
+
+.ani2:nth-of-type(1) {
     animation-delay: -1.7s;
 }
-.ani2:nth-of-type(2){
+
+.ani2:nth-of-type(2) {
     animation-delay: -1.6s;
 }
-.ani2:nth-of-type(3){
+
+.ani2:nth-of-type(3) {
     animation-delay: -1.5s;
 }
-.ani2:nth-of-type(4){
+
+.ani2:nth-of-type(4) {
     animation-delay: -1.4s;
 }
-.ani2:nth-of-type(5){
+
+.ani2:nth-of-type(5) {
     animation-delay: -1.3s;
 }
-.ani2:nth-of-type(6){
+
+.ani2:nth-of-type(6) {
     animation-delay: -1.2s;
 }
-.ani2:nth-of-type(7){
+
+.ani2:nth-of-type(7) {
     animation-delay: -1.1s;
 }
-.ani2:nth-of-type(8){
+
+.ani2:nth-of-type(8) {
     animation-delay: -1.0s;
 }
-.ani2:nth-of-type(9){
+
+.ani2:nth-of-type(9) {
     animation-delay: -0.9s;
 }
-.ani2:nth-of-type(10){
+
+.ani2:nth-of-type(10) {
     animation-delay: -0.8s;
 }
-.ani2:nth-of-type(11){
+
+.ani2:nth-of-type(11) {
     animation-delay: -0.7s;
 }
-.ani2:nth-of-type(12){
+
+.ani2:nth-of-type(12) {
     animation-delay: -0.6s;
 }
-.ani2:nth-of-type(13){
+
+.ani2:nth-of-type(13) {
     animation-delay: -0.5s;
 }
-.ani2:nth-of-type(14){
+
+.ani2:nth-of-type(14) {
     animation-delay: -0.4s;
 }
-.ani2:nth-of-type(15){
+
+.ani2:nth-of-type(15) {
     animation-delay: -0.3s;
 }
-.ani2:nth-of-type(16){
+
+.ani2:nth-of-type(16) {
     animation-delay: -0.2s;
 }
-.ani2:nth-of-type(17){
+
+.ani2:nth-of-type(17) {
     animation-delay: -0.1s;
 }
-.ani2:nth-of-type(18){
+
+.ani2:nth-of-type(18) {
     animation-delay: -0.0s;
 }
+
 /*********************** film reel animation ***********************/
 /* formatting */
 
-.leftFormatting{
-   left: 0px;
-   position: absolute;
+.leftFormatting {
+    left: 0px;
+    position: absolute;
 }
-.rightFormatting{
+
+.rightFormatting {
     right: 0px;
     position: absolute;
 }
-.clip{
+
+.clip {
     clip-path: polygon(0px 0px, 150px 0px, 150px 300px, 0px 300px);
 }
-.moviefilmanimation{
+
+.moviefilmanimation {
     background-color: #353535;
     width: 21px;
     height: 350px;
     position: absolute;
     margin-top: 0;
 }
-.leftReel{
+
+.leftReel {
     left: 0;
 }
-.leftReel2, .leftReel3, .leftReel4{
+
+.leftReel2, .leftReel3, .leftReel4 {
     left: 11px;
     width: 0;
 }
-.rightReel{
+
+.rightReel {
     left: 125px;
 
 }
-.rightReel2, .rightReel3, .rightReel4{
+
+.rightReel2, .rightReel3, .rightReel4 {
     left: 136px;
     width: 0;
 }
-.mainReelBG{
+
+.mainReelBG {
     left: 21px;
     width: 104px;
 }
-.mainReel, .mainReel2{
+
+.mainReel, .mainReel2 {
     left: 30px;
     width: 0px;
 }
+
 .leftReel::after, .leftReel::before, .leftReel2::after, .leftReel2::before, .leftReel3::after, .leftReel3::before, .leftReel4::after, .leftReel4::before,
 .rightReel::after, .rightReel::before, .rightReel2::after, .rightReel2::before, .rightReel3::after, .rightReel3::before, .rightReel4::after, .rightReel4::before,
- .mainReel::after, .mainReel::before, .mainReel2::after, .mainReel2::before{
+.mainReel::after, .mainReel::before, .mainReel2::after, .mainReel2::before {
     content: "";
     position: absolute;
     margin-top: 5px;
-    margin-left:-5px;
+    margin-left: -5px;
     width: 10px;
     height: 10px;
-    border-radius:2px;
+    border-radius: 2px;
     background-color: white;
     background-size: 100% 50px;
     animation: reel-movement 5s linear infinite;
 }
-.mainReel::after, .mainReel::before, .mainReel2::after, .mainReel2:before{
+
+.mainReel::after, .mainReel::before, .mainReel2::after, .mainReel2:before {
     width: 92px;
     height: 52px;
     animation: main-movement 5s linear infinite;
 }
-@keyframes reel-movement{
-    0%{
-       bottom: 0;
+
+@keyframes reel-movement {
+    0% {
+        bottom: 0;
     }
-    100%{
-        bottom:350px;
-    }
-}
-@keyframes main-movement{
-    0%{
-       bottom: 0;
-    }
-    100%{
-        bottom:350px;
+    100% {
+        bottom: 350px;
     }
 }
-.leftReel::after, .rightReel::after, .mainReel::after{
+
+@keyframes main-movement {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 350px;
+    }
+}
+
+.leftReel::after, .rightReel::after, .mainReel::after {
     animation-delay: 0s;
 }
-.leftReel::before, .rightReel::before{
+
+.leftReel::before, .rightReel::before {
     animation-delay: -.625s;
 }
-.leftReel2::after, .rightReel2::after, .mainReel::before{
+
+.leftReel2::after, .rightReel2::after, .mainReel::before {
     animation-delay: -1.25s;
 }
-.leftReel2::before, .rightReel2::before{
+
+.leftReel2::before, .rightReel2::before {
     animation-delay: -1.875s;
 }
-.leftReel3::after, .rightReel3::after, .mainReel2::after{
+
+.leftReel3::after, .rightReel3::after, .mainReel2::after {
     animation-delay: -2.5s;
 }
-.leftReel3::before, .rightReel3::before{
+
+.leftReel3::before, .rightReel3::before {
     animation-delay: -3.125s;
 }
-.leftReel4::after, .rightReel4::after, .mainReel2::before{
+
+.leftReel4::after, .rightReel4::after, .mainReel2::before {
     animation-delay: -3.75s;
 }
-.leftReel4::before, .rightReel4::before{
+
+.leftReel4::before, .rightReel4::before {
     animation-delay: -4.375s;
 }</style>
 
 <body>
-    <!-- title -->
-    <section class="header">
-        <h1><a href="index">Movie List</a></h1>
-        <div class="animationtest"></div>
-        <!-- subheading -->
-        <ul>
-            <li><a href="mylist">My List</a></li>
-            <li><a href="login">Login</a>/<a href="register">Register</a></li>
+<!-- title -->
+<section class="header">
+    <h1><a href="index">Movie List</a></h1>
+    <div class="animationtest"></div>
+    <!-- subheading -->
+    <ul>
+        <li><a href="mylist">My List</a></li>
+        <li><a href="login">Login</a>/<a href="register">Register</a></li>
 
-        </ul>
-    </section>
-    <section class="animationoverflow">
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-        <div class="ani2"></div>
-    </section>
-    <section>
-        <h2>SEARCH RESULTS</h2>
-    </section>
-    <section>
-        <table>
+    </ul>
+</section>
+<section class="animationoverflow">
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+    <div class="ani2"></div>
+</section>
+<section>
+    <h2>SEARCH RESULTS</h2>
+</section>
+<section>
+    <table>
 
-            <tr>
-                <th>Movie Title(Click to access to its IMDb website)</th>
-                <th>Year</th>
-                <th>IMDB Score</th>
-                <th>Director</th>
-                <th>Genres</th>
-                <th>Your Rating</th>
-            </tr>
-            {% for movie in found_movies %}
+        <tr>
+            <th>Movie Title(Click to access its IMDb website)</th>
+            <th>Year</th>
+            <th>IMDB Score</th>
+            <th>Director</th>
+            <th>Genres</th>
+            <th>Your Rating</th>
+        </tr>
+        {% for movie in found_movies %}
             <tr>
                 <td><a href={{ movie.movie_imdb_link }}>{{ movie.movie_title }}</a></td>
                 <td>{{ movie.title_year }}</td>
@@ -426,34 +528,30 @@ th{
 
                 <td>
                     <form name='rate' method="POST" action="{% url 'movies:rate' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="movie" value="{{ movie.movie_title }}">
+                        <input type="hidden" name="year" value="{{ movie.title_year }}">
+                        <input type="hidden" name="user" value="{{ user.id }}">
+                        <select name="rating">
+                            <option value="">--Please choose a rating--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button class="smallButton" type="submit">Rate</button>
 
-
-                         <input type="hidden" name="movie" value="{{ movie.movie_title }}">
-                         <input type="hidden" name="year" value="{{ movie.title_year }}">
-                         <input type="hidden" name="user" value="{{ user.id }}">
-
-                        <select id="rating">
-                    <option value="">--Please choose a rate--</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option></select>
-                    <button class="smallButton" type="submit">Rate</button>
-
-</form>
+                    </form>
                 </td>
-
-
-
             </tr>
-            {% endfor %}
-        </table>
-    </section>
+        {% endfor %}
+    </table>
+</section>
 </body>
 </html>
