@@ -2,8 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Movie List</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="main.js"></script>
 </head>
 <style>/* theme
 #FFFFFF - White
@@ -368,17 +372,16 @@ th{
 .leftReel4::before, .rightReel4::before{
     animation-delay: -4.375s;
 }</style>
-
 <body>
-    <!-- title logo/banner -->
+    <!-- title -->
     <section class="header">
-        <h1><a href="index">Movie List</a></h1>
+        <h1><a href="index.html">Movie List</a></h1>
         <div class="animationtest"></div>
         <!-- subheading -->
-        <ul><form name='search' method="GET" action="{% url 'movies:search' %}">
-            <li><a href="mylist">My List</a></li></form>
-            <li><a href="login">Login</a>/<a href="register">Register</a></li>
-
+        <ul>
+            <li><a href="mylist.html">My List</a></li>
+            <li><a href="login.html">Login</a>/<a href="register.html">Register</a></li>
+            
         </ul>
     </section>
     <section class="animationoverflow">
@@ -401,41 +404,28 @@ th{
         <div class="ani2"></div>
         <div class="ani2"></div>
     </section>
-    <!-- side film reels -->
+    <!-- login info -->
     <section>
-                <div class="clip">
-                    <div class="moviefilmanimation leftReel"></div>
-                    <div class="moviefilmanimation leftReel2"></div>
-                    <div class="moviefilmanimation leftReel3"></div>
-                    <div class="moviefilmanimation leftReel4"></div>
-                    <div class="moviefilmanimation mainReelBG"></div>
-                    <div class="moviefilmanimation mainReel"></div>
-                    <div class="moviefilmanimation mainReel2"></div>
-                    <div class="moviefilmanimation rightReel"></div>
-                    <div class="moviefilmanimation rightReel2"></div>
-                    <div class="moviefilmanimation rightReel3"></div>
-                    <div class="moviefilmanimation rightReel4"></div>
-                </div>
+        <h2>Login</h2>
     </section>
-    <!-- Search -->
-    <section>
-        <div class="wrapper">
-            <div class="searchTextFieldFormatting">
-                <h4>Movie Title</h4>
+{#    <section>#}
+{#        <label for="username">Username</label>#}
+{#        <input class="" id="username" type="text" placeholder="Username">#}
+{#        <label for="Password">Password</label>#}
+{#        <input class="" id="password" type="text" placeholder="Password">#}
+{#        <div class="centeredbutton">#}
+{#                <button class ="submitButton" type="submit">Login</button>#}
+{#        </div>#}
+{#    </section>#}
+{% block title %}Login{% endblock %}
 
-            <form name='search' method="GET" action="{% url 'movies:search' %}">
-                            <input class="nameTextField" name="query" type="text" placeholder="Name of movie...">
-{#                 <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">#}
-                <div class="centeredbutton">
-
-                <button class ="submitButton" type="submit">Search</button>
- </div>
-
-            </form>
-            </div>
-        </div>
-
-    </section>
-    </body>
+{% block content %}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}
 </body>
 </html>

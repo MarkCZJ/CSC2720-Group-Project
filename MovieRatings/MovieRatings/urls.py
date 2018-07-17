@@ -21,5 +21,6 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/movies/', permanent=False), name='index'),
+    path('accounts/profile/', RedirectView.as_view(url='/movies/', permanent=False), name='index'),
     path('movies/', include('movies.urls')),
 ]
