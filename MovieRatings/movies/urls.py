@@ -15,7 +15,8 @@ urlpatterns = [
     path('mylist', views.my_list, name='mylist'),
     path('login', auth_views.login, name='login'),
     path('logout', auth_views.logout, name='logout'),
-    path('accounts/profile/', views.index, name='index')
+    # path('/accounts/profile/', views.index, name='index'),
+# path('accounts/profile/', views.index, name='index')
     # path('<uuid:pk>/rate', views.rate_movie, name='rate_movie')
 
     # # /movies/<movie id>/favorite/
