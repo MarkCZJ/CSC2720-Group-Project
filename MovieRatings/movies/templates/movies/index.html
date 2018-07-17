@@ -375,10 +375,10 @@ th{
         <h1><a href="index">Movie List</a></h1>
         <div class="animationtest"></div>
         <!-- subheading -->
-        <ul><form name='search' method="GET" action="{% url 'movies:search' %}">
-            <li><a href="mylist">My List</a></li></form>
+        <form name='search' method="GET" action="{% url 'movies:search' %}"></form>
+        <ul>
+            <li><a href="mylist">My List</a></li>
             <li><a href="login">Login</a>/<a href="register">Register</a></li>
-
         </ul>
     </section>
     <section class="animationoverflow">
