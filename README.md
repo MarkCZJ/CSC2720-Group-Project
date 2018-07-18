@@ -13,6 +13,6 @@ Alternatively, you can host it locally on your machine by starting the django we
 
 * [Python 3.6](https://www.python.org/) - Back End
 * [Django Web Framework](https://www.djangoproject.com/) - Middle Layer
-* [HTML5] (https://www.w3.org/TR/html5/) - Front End
-* [CSS] (https://www.w3.org/TR/CSS/#css) - Front End
+* [HTML5](https://www.w3.org/TR/html5/) - Front End
+* [CSS](https://www.w3.org/TR/CSS/#css) - Front End
 * [Digital Ocean](https://www.digitalocean.com/) - App hosting
