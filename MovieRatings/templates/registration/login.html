@@ -169,7 +169,17 @@ th{
     background-color:rgba(255, 42, 0, 0.76);
     border: 2px solid #353535;
 }
-/*********************** ANIAMTION ***********************/
+/*********************** LOGIN/REGISTER PAGE ***********************/
+.loginBoxContainer{
+    margin: auto;
+    text-align: left;
+    width: 400px;
+}
+.clear{
+    clear:both;
+}
+
+/*********************** ANIMATION ***********************/
 /* small single box */
 @keyframes test{
     0% {background-color:#FFFFFF; left: -100px;}
@@ -310,10 +320,14 @@ th{
         <h2>Login</h2>
     </section>
 {#    <section>#}
+    <div class="clear">
 {#        <label for="username">Username</label>#}
 {#        <input id="username" type="text" placeholder="Username">#}
+    </div>
+    <div class="clear">
 {#        <label for="password">Password</label>#}
 {#        <input id="password" type="text" placeholder="Password">#}
+    </div> 
 {#        <div class="centeredbutton">#}
 {#                <button class ="submitButton" type="submit">Login</button>#}
 {#        </div>#}

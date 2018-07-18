@@ -165,6 +165,15 @@
             background-color:rgba(255, 42, 0, 0.76);
             border: 2px solid #353535;
         }
+        /*********************** LOGIN/REGISTER PAGE ***********************/
+        .loginBoxContainer{
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .clear{
+            clear:both;
+        }
         /*********************** ANIAMTION ***********************/
         /* small single box */
         @keyframes test{
@@ -305,21 +314,29 @@
     <section>
         <h2>Register</h2>
     </section>
-    <section>
+    <section class="loginBoxContainer">
+    <div class="loginBoxContainer">
         {% block content %}
   
   <form method="post">
     {% csrf_token %}
+    <div class="clear">
              <label for="username">Username</label>
-{#        <input class="" id="username" type="text" placeholder="Username">#}
+{#        <input class="floatRight" id="username" type="text" placeholder="Username">#}
     {{ form.username }}
+    </div>
+    <div class="clear">
         <label for="password">Password</label>
-{#        <input class="" id="password" type="text" placeholder="Password">#}
+{#        <input class="floatRight" id="password" type="text" placeholder="Password">#}
     {{ form.password1 }}
+    </div>
+    <div class="clear">
+    <label for="confirm">Confirm Password</label>
       {{ form.password2 }}
         <div class="centeredbutton">
             <button class ="submitButton" type="submit">Register</button> </div>
-
+    </div>
+    </div>
   </form>
 {% endblock %}
     </section>
