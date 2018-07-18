@@ -17,7 +17,6 @@
 #284B63 - Dark Slate Gray
 #353535 - Jet Black
 */
-
 /*********************** global style ***********************/
 html, body{
     text-align: center;
@@ -33,7 +32,6 @@ h1, h2, h3, h4, label, table, ul, p{
 h1{
     font-size: 30px;
 }
-
 a:link, a:visited {
     color: white;
 }
@@ -49,7 +47,6 @@ input[type=text], input[type=password]{
 input[type=text]:focus, input[type=password]:focus{
     background-color: #D9D9D9;
 }
-
 /*********************** home title ***********************/
 .header{
     text-align: center;
@@ -57,7 +54,6 @@ input[type=text]:focus, input[type=password]:focus{
     margin: 0;
     padding: 50px;
 }
-
 /*********************** nav bar ***********************/
 ul {
     list-style-type: none;
@@ -70,8 +66,6 @@ li{
     padding-right: 10px;
     display: inline;
 }
-
-
 /*********************** home-search ***********************/
 /* formating */
 .wrapper{
@@ -293,7 +287,7 @@ th{
         <h1><a href="index">MovieRatings</a></h1>
         <div class="animationtest"></div>
         <!-- subheading -->
-        <ul>
+    <ul>
             {% if user.is_authenticated %}
                 <li><a href="mylist">My List</a></li>
                 <li><a href="logout">Logout</a></li>
@@ -302,7 +296,7 @@ th{
                 <li><a href="login">Login</a></li>
                 <li><a href="register">Register</a></li>
             {% endif %}
-        </ul>
+    </ul>
     </section>
     <section class="animationoverflow">
         <div class="ani2"></div>
