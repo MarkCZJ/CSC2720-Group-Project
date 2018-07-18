@@ -178,6 +178,12 @@ th{
 .clear{
     clear:both;
 }
+.centeredErrorMessage ul{
+    text-align: center;
+}
+.errorMessage li{
+    padding: 0px;
+}
 
 /*********************** ANIMATION ***********************/
 /* small single box */
@@ -341,7 +347,9 @@ th{
 {% block content %}
   <form method="post">
     {% csrf_token %}
+    <div class="centeredErrorMessage errorMessage">
     {{ form.as_p }}
+    </div>
     <button class="submitButton" type="submit">Login</button>
   </form>
 {% endblock %}
