@@ -42,7 +42,7 @@
             border-radius: 12px;
             padding: 10px 15px;
         }
-        input[type=text]:focus, input[type=password]{
+        input[type=text]:focus, input[type=password]:focus{
             background-color: #D9D9D9;
         }
         
@@ -166,15 +166,17 @@
             border: 2px solid #353535;
         }
         /*********************** LOGIN/REGISTER PAGE ***********************/
-        .loginBoxContainer{
-            display: flex;
-            justify-content: space-around;
+        label{
             text-align: left;
         }
         .clear{
-            clear:both;
+            clear: both;
         }
-        /*********************** ANIAMTION ***********************/
+        .boxContainer{
+            width:500px;
+            margin: auto;
+        }
+        /*********************** ANIMATION ***********************/
         /* small single box */
         @keyframes test{
             0% {background-color:#FFFFFF; left: -100px;}
@@ -314,29 +316,30 @@
     <section>
         <h2>Register</h2>
     </section>
-    <section class="loginBoxContainer">
-    <div class="loginBoxContainer">
+    <section>
         {% block content %}
   
   <form method="post">
+      <div class="boxContainer">
     {% csrf_token %}
-    <div class="clear">
              <label for="username">Username</label>
-{#        <input class="floatRight" id="username" type="text" placeholder="Username">#}
+             <div class="clear">
+{#        <input id="username" type="text" placeholder="Username">#}
     {{ form.username }}
     </div>
-    <div class="clear">
         <label for="password">Password</label>
-{#        <input class="floatRight" id="password" type="text" placeholder="Password">#}
+        <div class="clear">
+{#        <input id="password" type="text" placeholder="Password">#}
     {{ form.password1 }}
     </div>
+    <label class="textalignLeft" for="confirm">Confirm Password</label>
     <div class="clear">
-    <label for="confirm">Confirm Password</label>
       {{ form.password2 }}
+      </div>
         <div class="centeredbutton">
             <button class ="submitButton" type="submit">Register</button> </div>
-    </div>
-    </div>
+            </div>
+        </div>
   </form>
 {% endblock %}
     </section>
