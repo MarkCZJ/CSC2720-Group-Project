@@ -410,27 +410,16 @@ th{
         <div class="ani2"></div>
     </section>
     <!-- login info -->
-    
-{#    <section>#}
-{#        <label for="username">Username</label>#}
-{#        <input class="" id="username" type="text" placeholder="Username">#}
-        <br/>  
-		<br/> 
-{#        <label for="Password">Password</label>#}
-{#        <input class="" id="password" type="text" placeholder="Password">#}
-{#        <div class="centeredbutton">#}
-{#                <button class ="submitButton" type="submit">Login</button>#}
-{#        </div>#}
-{#    </section>#}
+    <br/>
+    <br/>
 
-
-{% block content %}
-  <h2>Login</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
-{% endblock %}
+    {% block content %}
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    {% endblock %}
 </body>
 </html>

@@ -314,44 +314,40 @@
             <tr>
                 <th>Movie Title</th>
                 <th>Year</th>
-                <th>Rating/10</th>
-                <th>Rate</th>
+                <th>Your Rating</th>
+                <th>Change Your Rating</th>
             </tr>
             <tr>
+                {% for movie in found_movies %}
+                    <tr>
+                        <td><a href={{ movie.movie_imdb_link }}>{{ movie.movie_title }}</a></td>
+                        <td>{{ movie.title_year }}</td>
+                        <td>{{ movie.rating }}</td>
+                        <td>
+                            <form name='edit' method="POST" action="{% url 'movies:edit' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="movie" value="{{ movie.movie_title }}">
+                                <input type="hidden" name="year" value="{{ movie.title_year }}">
+                                <input type="hidden" name="user" value="{{ user.id }}">
+                                <select name="rating">
+                                    <option value="">--Please choose a rating--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <button class="smallButton" type="submit">Rate</button>
 
-
-                            {% for movie in found_movies %}
-            <tr>
-                <td><a href={{ movie.movie_imdb_link }}>{{ movie.movie_title }}</a></td>
-                <td>{{ movie.title_year }}</td>
-                <td>{{ movie.rating}}</td>
-                <td>
-                               <form name='rate' method="POST" action="{% url 'movies:rate' %}">
-                        {% csrf_token %}
-                        <input type="hidden" name="movie" value="{{ movie.movie_title }}">
-                        <input type="hidden" name="year" value="{{ movie.title_year }}">
-                        <input type="hidden" name="user" value="{{ user.id }}">
-                        <select name="rating">
-                            <option value="">--Please choose a rating--</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <button class="smallButton" type="submit">Rate</button>
-
-                    </form>
-                </td>
-{#                    <input class="rateTF" type="text" placeholder="#">#}
-{#                    <button class="smallButton" type="submit">Rate</button></td>#}
-            </tr>
-            {% endfor %}
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
             </tr>
         </table>
     </section>

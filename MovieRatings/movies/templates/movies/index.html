@@ -310,21 +310,16 @@
     <section>
         <div class="wrapper">
             <div class="searchTextFieldFormatting">
-                <h4>Movie Title</h4>
-
-            <form name='search' method="GET" action="{% url 'movies:search' %}">
-                            <input class="nameTextField" name="query" type="text" placeholder="Name of movie...">
-{#                 <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">#}
-                <div class="centeredbutton">
-
-                <button class ="submitButton" type="submit">Search</button>
- </div>
-
-            </form>
+                <h3 style="text-align: center">Search</h3>
+                <form name='search' method="GET" action="{% url 'movies:search' %}">
+                    <input class="nameTextField" name="query" type="text" placeholder="Name of movie...">
+                    <div class="centeredbutton">
+                        <button class="submitButton" type="submit">Search</button>
+                    </div>
+                </form>
             </div>
         </div>
 
     </section>
     </body>
-</body>
 </html>
