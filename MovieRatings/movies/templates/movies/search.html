@@ -304,14 +304,30 @@
     <div class="ani2"></div>
     <div class="ani2"></div>
 </section>
+
+    <section>
+        <div class="wrapper">
+            <div class="searchTextFieldFormatting">
+                <h2 style="text-align: center">Search</h2>
+                <form name='search' method="GET" action="{% url 'movies:search' %}">
+                    <input class="nameTextField" name="query" type="text" placeholder="Name of movie...">
+                    <div class="centeredbutton">
+                        <button class="submitButton" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
 <section>
     <h2>SEARCH RESULTS</h2>
+    <h4>You can rate a movie or click its title to view the movie on IMDb</h4>
 </section>
 <section>
     <table>
 
         <tr>
-            <th>Movie Title(Click to access its IMDb website)</th>
+            <th>Movie Title</th>
             <th>Year</th>
             <th>IMDB Score</th>
             <th>Director</th>
@@ -333,7 +349,7 @@
                         <input type="hidden" name="year" value="{{ movie.title_year }}">
                         <input type="hidden" name="user" value="{{ user.id }}">
                         <select name="rating">
-                            <option value="">--Please choose a rating--</option>
+                            <option value="">1-10</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -346,7 +362,6 @@
                             <option value="10">10</option>
                         </select>
                         <button class="smallButton" type="submit">Rate</button>
-
                     </form>
                 </td>
             </tr>

@@ -319,6 +319,7 @@
     <!-- login info -->
     <section>
         <h2>Register</h2>
+        <h3>Passwords must contain at least 8 characters and at least 1 number</h3>
     </section>
     <section>
         {% block content %}
@@ -330,10 +331,12 @@
                     <div class="clear">
                         {{ form.username }}
                     </div>
+                    <br>
                     <label for="password">Password</label>
                     <div class="clear">
                         {{ form.password1 }}
                     </div>
+                    <br>
                     <label class="textalignLeft" for="confirm">Confirm Password</label>
                     <div class="clear">
                         {{ form.password2 }}

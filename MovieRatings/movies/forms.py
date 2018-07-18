@@ -17,7 +17,6 @@ class RateMovie(forms.Form):
 
     def save(self, commit=True):
         instance = super(RateMovie, self).save(commit=False)
-        # rating =forms.IntegerField(help_text="Enter any number from 0 to 10")
         rating = self.cleaned_data['rating']
         movie = self.cleaned_data['movie']
         instance.save()

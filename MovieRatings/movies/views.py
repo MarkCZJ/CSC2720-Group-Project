@@ -1,17 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .models import Movie, UserRatings
-from django.contrib.auth.models import User
-from django.views.generic import View
-from .forms import UserForm, RateMovie
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import get_object_or_404
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-import datetime
 
 
-# Create your views here.
 def index(request):
     all_movies = Movie.objects.all()
 
@@ -56,13 +48,15 @@ def search(request):
 def rate(request):
     if request.user.id is None:
         return render(request, 'movies/index.html', {})
-    if request.method == 'GET':
-        form = request.GET.__str__()
+
+
     if request.method == 'POST':
         user_id = request.user.id
         movie = request.POST.get('movie')
         year = request.POST.get('year')
         user_rating = request.POST.get('rating')
+        if user_rating == '':
+            return redirect('movies:index')
         existing_rating = UserRatings.objects.filter(user=user_id,
                                                      movie_title=movie,
                                                      title_year=year)
@@ -88,6 +82,8 @@ def edit(request):
         movie = request.POST.get('movie')
         year = request.POST.get('year')
         user_rating = request.POST.get('rating')
+        if user_rating == '':
+            return redirect('movies:index')
         existing_rating = UserRatings.objects.get(user=user_id,
                                                   movie_title=movie,
                                                   title_year=year)
