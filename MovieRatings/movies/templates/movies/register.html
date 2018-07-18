@@ -286,10 +286,14 @@
         <div class="animationtest"></div>
         <!-- subheading -->
         <ul>
-            <li><a href="index">Home</a></li>
-            <li><a href="mylist">My List</a></li>
-            <li><a href="login">Login</a>/<a href="register">Register</a></li>
-
+            {% if user.is_authenticated %}
+                <li><a href="mylist">My List</a></li>
+                <li><a href="logout">Logout</a></li>
+                <li> <b>{{ user.username }}</b></li>
+                {% else %}
+                <li><a href="login">Login</a></li>
+                <li><a href="register">Register</a></li>
+            {% endif %}
         </ul>
     </section>
     <section class="animationoverflow">

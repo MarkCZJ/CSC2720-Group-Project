@@ -100,6 +100,8 @@ def search(request):
             return render(request,'movies/search.html',{})
 
 def rate(request):
+    if request.user.id is None:
+        return render(request, 'movies/index.html', {})
     if request.method == 'GET':
         form = request.GET.__str__()
         print(form)

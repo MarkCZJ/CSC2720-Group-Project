@@ -25,7 +25,7 @@ SECRET_KEY = 'b45u&v281bexwps%=x!la8t7)*@8m6k_$0rii%f8)g(-1%)z67'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['167.99.13.239','127.0.0.1']
 
 
 # Application definition
@@ -122,3 +122,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
