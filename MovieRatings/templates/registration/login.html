@@ -288,16 +288,16 @@ th{
         <h1><a href="index">GSU IMDb</a></h1>
         <div class="animationtest"></div>
         <!-- subheading -->
-        <ul>
-            <li><a href="mylist">My List</a></li>
+    <ul>
             {% if user.is_authenticated %}
+                <li><a href="mylist">My List</a></li>
                 <li><a href="logout">Logout</a></li>
-                <li> {{ user.username }}</li>
+                <li> <b>{{ user.username }}</b></li>
                 {% else %}
                 <li><a href="login">Login</a></li>
                 <li><a href="register">Register</a></li>
             {% endif %}
-        </ul>
+    </ul>
     </section>
     <section class="animationoverflow">
         <div class="ani2"></div>
