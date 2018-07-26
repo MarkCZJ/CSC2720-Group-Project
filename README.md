@@ -4,7 +4,7 @@ This application allows visitors to create an account, search a movie database, 
 
 ## Getting Started
 
-You can access the application here: http://167.99.13.239:8000/
+You can access the application here: http://167.99.13.239:80/
 
 Alternatively, you can host it locally on your machine by starting the django webserver. The instructions are detailed in the 'How To Start Application.docx' document
 
